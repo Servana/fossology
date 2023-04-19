@@ -500,7 +500,7 @@ def print_results(name, failed_results, result_file):
 
 
 def main(argv):
-  get_ci_name()
+  # get_ci_name()
   cli_options = parse_argv(argv)
 
   try:
@@ -509,9 +509,9 @@ def main(argv):
     print("Unable to find whitelist.json in current dir\n" +
           "Continuing without it.", file=sys.stderr)
 
-  repo_setup = RepoSetup(cli_options)
-  if cli_options.repo == False:
-    cli_options.diff_dir = repo_setup.get_diff_dir()
+  # repo_setup = RepoSetup(cli_options)
+  # if cli_options.repo == False:
+  #   cli_options.diff_dir = repo_setup.get_diff_dir()
 
   scanner = Scanners(cli_options)
   return_val = 0
