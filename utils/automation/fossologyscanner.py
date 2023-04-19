@@ -526,7 +526,7 @@ def main(argv):
     if failed_licenses != True:
       print("\u2718 Following licenses found which are not whitelisted:")
       license_file.write("Following licenses found which are not whitelisted:\n")
-      # print_results("License", failed_licenses, license_file)
+      print_results("License", failed_licenses, license_file)
       return_val = return_val | 2
     else:
       print("\u2714 No license violation found")
@@ -539,7 +539,7 @@ def main(argv):
     if copyright_results != False:
       print("\u2718 Following copyrights found:")
       copyright_file.write("Following copyrights found:\n")
-      # print_results("Copyright", copyright_results, copyright_file)
+      print_results("Copyright", copyright_results, copyright_file)
       return_val = return_val | 4
     else:
       print("\u2714 No copyright violation found")
@@ -552,7 +552,7 @@ def main(argv):
     if keyword_results != False:
       print("\u2718 Following keywords found:")
       keyword_file.write("Following keywords found:\n")
-      # print_results("Keyword", keyword_results, keyword_file)
+      print_results("Keyword", keyword_results, keyword_file)
       return_val = return_val | 8
     else:
       print("\u2714 No keyword violation found")
